@@ -12,9 +12,27 @@
     <script src="{{ mix('/js/app.js') }}" defer></script>
 </head>
 <body>
-    <header>
+    <header style="background-color:lightgreen;">
 
+        <div class="content_header" style="display: flex; flex-direction: row;">
 
+            <div style="padding: 20px;">
+                <img src="" class="log"/>
+                <p>Logo</p>
+            </div>
+
+            <div style="padding: 20px;">
+                <button>Réservation de la salle</button>
+                <button>Evènement</button>
+                <button>Réservation d'un billet</button>
+            </div>
+
+            <div style="padding: 20px;">
+                <img src="" class="photo-profil"/>
+                <p class="pseudo">Pseudo</p>
+            </div>
+
+        </div>
 
     </header>
 
