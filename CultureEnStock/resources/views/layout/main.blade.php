@@ -1,3 +1,5 @@
+<!-- Morgane -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,10 +14,10 @@
 <body>
     <header>
 
-    
+
 
     </header>
-    
+
 
 
         @yield('content')
@@ -25,7 +27,7 @@
 
     <footer>
 
-    
+
     </footer>
 </body>
 </html>
