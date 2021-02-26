@@ -21,5 +21,12 @@
     </div>
 </div>
 
-
+<style>
+    .photo-profil{
+        height: 100px;
+        width: 100px;
+        background-color: blue;
+        border-radius: 50px;
+    }
+</style>
 @endsection
