@@ -9,10 +9,13 @@
 
             <div class="card">
                 <div class="container">
-                    <div class="mail-box"></div>
-                    <div class="password-box"></div>
+                        <input class="mail-box" type="email" id="email" name="email" placeholder="Mail" required>
+                        <input class="password-box" type="password" id="password" name="password" placeholder="Mot de passe" required>
                 </div>
                 <div class="container">
+                    <button class="btn-cancel">Retour</button>
+                    <input class="btn-validate" type="submit" value="Connexion">
+                    <div class="norm-text">Pas de compte ?</div> <a href="">Inscrivez-vous !</a>
                 </div>
 
             </div>
