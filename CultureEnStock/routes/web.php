@@ -22,6 +22,6 @@ Route::get('/demo', function () {
 });
 
 Route::get('/profil', function () {
-    return view('user.profil');
+    return view('user\profil');
 });
 
