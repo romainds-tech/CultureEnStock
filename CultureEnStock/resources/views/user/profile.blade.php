@@ -1,3 +1,4 @@
+<!-- Claire -->
 @extends('layout.main')
 @section('content')
 
