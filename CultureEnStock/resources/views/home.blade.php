@@ -15,6 +15,7 @@
 <body>
     <div id="app">
         <div class="container">
+            <example-component></example-component>
         </div>
     </div>
 </body>
