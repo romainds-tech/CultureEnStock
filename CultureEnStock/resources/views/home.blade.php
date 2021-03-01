@@ -1,6 +1,3 @@
-@extends('layout.main')
-@section('content')
-
 <!DOCTYPE html>
 <html>
 
@@ -15,17 +12,9 @@
 <body>
     <div id="app">
         <div class="container">
-
-            <router-link to='/'>Home</router-link>
-            <router-link to='/login'>Login</router-link>
-            <router-link to='/profile'>Profil </router-link>
-
-            <router-view></router-view>
+            <layout></layout>
         </div>
     </div>
 </body>
 
 </html>
-
-
-@endsection
