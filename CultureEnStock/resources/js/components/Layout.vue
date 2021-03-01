@@ -4,24 +4,26 @@
 
 
         <!-- TON CODE A ADAPTER -->
-        <div class="content_header bg-green-200 flex py-4 align-middle">
+        <div class="content_header bg-green-200 flex py-4 align-middle mb-20">
 
             <router-link to="/">
-                <div class="flex-none w-40 text-center">
+                <div class="flex-none w-80 text-center">
                     <img src="" class="log"/>
                     <p>Logo</p>
                 </div>
             </router-link>
 
-            <div class="flex-grow flex-wrap flex text-center border-l-2 border-r-2">
+            <div class="flex-grow flex-wrap flex text-center border-l-2 border-r-2 border-gray-800">
                 <button class="flex-1 px-2 text-center underline whitespace-nowrap">Réservation de la salle</button>
                 <button class="flex-1 px-2 text-center underline">Evènement</button>
                 <button class="flex-1 px-2 text-center underline whitespace-nowrap">Réservation d'un billet</button>
             </div>
 
 
-            <div class="flex-none w-40 text-center">
-                <router-link to="/login">Se connecter</router-link>
+            <div class="flex-none flex w-80 text-center">
+                <!--Si pas connecté-->
+                <router-link to="/login" class="flex-1">Se connecter</router-link>
+                <router-link to="" class="flex-1">S'inscrire</router-link>
                 <!--Si connecté
                 <router-link to="/profile">
                     <img src="" class="photo-profil"/>
