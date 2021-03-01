@@ -4,7 +4,7 @@
     <form action="" method="POST">
       <div class="card w-1/3 m-auto rounded-3xl">
 
-        <div class="container p-4 float-left">
+        <div class="container p-4 float-left w-max">
           <input
             class="mail-box p-2"
             type="email"
