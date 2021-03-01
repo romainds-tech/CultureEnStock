@@ -1,38 +1,41 @@
+<!-- Romain -->
 <template>
-  <div class="container">
-    <div class="big-title text-3xl text-center p-10">Connexion</div>
-    <form action="" method="POST">
-      <div class="card w-1/3 m-auto rounded-3xl">
+    <div class="container">
+        <div class="big-title text-3xl text-center p-10">Connexion</div>
+            <form action="" method="POST">
 
-        <div class="container p-4 float-left w-max">
-          <input
-            class="mail-box p-2"
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Mail"
-            required
-          /> <br>
-          <input
-            class="password-box p-2"
-            type="password"
-            id="password"
-            name="password"
-            placeholder="Mot de passe"
-            required
-          />
-        </div>
+                <!-- Gérer message d'erreur "Mot de passe incorrect" etc. -->
 
-        <div class="container p-4 text-center">
+                <div class="card w-1/3 m-auto rounded-3xl">
 
-          <button class="btn-cancel">Retour</button>
-          <input class="btn-validate" type="submit" value="Connexion" />
+                <div class="container p-4 float-left w-max">
+                    <!-- Taille XL marche pas (app.css) -->
+                    <input
+                        class="mail-box p-2 input-xl"
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Mail"
+                        required
+                    /> <br>
+                    <input
+                        class="password-box p-2 input-xl"
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Mot de passe"
+                        required
+                    />
+                </div>
 
-          <div class="norm-text p-2">Pas de compte ? <a href="">Inscrivez-vous !</a></div>
-          
+                <div class="container p-4 text-center">
 
-        </div>
-      </div>
-    </form>
-  </div>
+                <button class="btn-cancel">Retour</button>
+                <input class="btn-validate" type="submit" value="Connexion" />
+
+                <div class="norm-text p-2">Pas de compte ? <router-link to="/register">Inscrivez-vous !</router-link></div> <!-- Modif Cocheto a -> router-link -->
+                </div>
+            </div>
+        </form>
+    </div>
 </template>

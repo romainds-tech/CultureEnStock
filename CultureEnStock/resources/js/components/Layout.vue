@@ -1,8 +1,5 @@
 <template>
-
-  <div>
-
-
+    <div>
         <!-- TON CODE A ADAPTER -->
         <div class="content_header bg-green-200 flex py-4 align-middle mb-20">
 
@@ -21,34 +18,29 @@
 
 
             <div class="flex-none flex w-80 text-center">
-                <!--Si pas connecté-->
+                <!-- Si pas connecté-->
                 <router-link to="/login" class="flex-1">Se connecter</router-link>
-                <router-link to="" class="flex-1">S'inscrire</router-link>
-                <!--Si connecté
+                <router-link to="/register" class="flex-1">S'inscrire</router-link>
+                <!-- Si connecté
                 <router-link to="/profile">
                     <img src="" class="photo-profil"/>
                     <p class="pseudo">Pseudo</p>
                  </router-link> -->
             </div>
-
         </div>
-
         <!-- TON CODE A ADAPTER -->
-
-    <!--
-    <router-link to="/"> Home </router-link>
-    <router-link to="/login"> Login </router-link>
-    <router-link to="/profile"> Profil </router-link> -->
-
-    <router-view></router-view>
-  </div>
-
+        <!--
+        <router-link to="/"> Home </router-link>
+        <router-link to="/login"> Login </router-link>
+        <router-link to="/profile"> Profil </router-link> -->
+        <router-view></router-view>
+    </div>
 </template>
 
 <script>
     export default {
-    mounted() {
-        console.log("Component mounted.");
-    },
+        mounted() {
+            console.log("Component mounted.");
+        },
     };
 </script>

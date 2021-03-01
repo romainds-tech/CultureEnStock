@@ -2,35 +2,82 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+   -------------- Buttons ----------------
+*/
 
-/* DEMO PAGE */
-.pokemons{
-    @apply bg-red-500 p-10 text-center;
-    
-    .pokemon{
-
-        @apply inline-block bg-green-300 p-5 rounded-br-lg;
-    
-        .namepoke{
-    
-            @apply text-2xl text-center;
-            width: 100%;
-        }
-        
-        
-    }
+.btn-cancel { /* Cocheto */
+    @apply p-2 rounded-xl bg-red-400;
+    color: white;
+    border: 1px solid #a00;
+    transition: all 0.8s ease-in-out;
 }
-/* DEMO PAGE */
 
+.btn-cancel:hover {
+    @apply bg-red-100;
+    color: #800;
+}
 
-.btn-validate{
+.btn-validate{ /* ? */
     @apply p-2 rounded-2xl;
     background-color: #709CA5;
     color:white;
     border: 1px solid #709CA5;
+    transition: all 0.8s ease-in-out;
 }
+
 .btn-validate:hover{
     background-color: white;
     color: #709CA5;
-    border: 1px solid #709CA5; 
+    border: 1px solid #709CA5;
+}
+
+/*
+   -------------- Text Input ----------------
+*/
+
+input {
+    .input-sm {
+        width: 200px;
+        overflow-x: hidden;
+    }
+
+    .input-xl {
+        width: 100%;
+    }
+
+    @apply m-1;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+
+
+}
+/*
+   -------------- Text ----------------
+*/
+
+/*
+   -------------- Navigation Bar ----------------
+*/
+
+/*
+   -------------- Image ----------------
+*/
+
+/* DEMO PAGE */
+.pokemons{
+    @apply bg-red-500 p-10 text-center;
+
+    .pokemon{
+
+        @apply inline-block bg-green-300 p-5 rounded-br-lg;
+
+        .namepoke{
+
+            @apply text-2xl text-center;
+            width: 100%;
+        }
+
+
+    }
 }
