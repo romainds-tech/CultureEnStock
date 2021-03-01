@@ -1,6 +1,6 @@
 <template>
 
-  <div class="container">
+  <div>
 
 
         <!-- TON CODE A ADAPTER -->

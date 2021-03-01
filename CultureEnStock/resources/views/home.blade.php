@@ -13,9 +13,7 @@
 
 <body>
     <div id="app">
-        <div class="container">
             <layout></layout>
-        </div>
     </div>
 </body>
 
