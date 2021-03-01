@@ -7,7 +7,7 @@
       </div>
 
       <div
-        class=" rounded-md bg-pink-900 text-white font-semibold flex items-center justify-center py-3 px-6">
+        class=" rounded-md bg-pink-900 text-white font-semibold flex items-center justify-center py-3 px-96">
             PSEUDO
       </div>
     </div>
