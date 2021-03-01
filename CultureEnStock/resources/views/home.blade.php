@@ -15,7 +15,11 @@
 <body>
     <div id="app">
         <div class="container">
-            <example-component></example-component>
+        
+            <router-link to='/'>Home</router-link>
+            <router-link to='/login'>Login</router-link>
+            
+            <router-view></router-view>
         </div>
     </div>
 </body>
