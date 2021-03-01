@@ -1,23 +1,38 @@
 <template>
-    <div class="container">
-        <div class="big-title">Connexion</div>
-        <form action="" method="POST">
+  <div class="container">
+    <div class="big-title text-3xl text-center p-10">Connexion</div>
+    <form action="" method="POST">
+      <div class="card w-1/3 m-auto rounded-3xl">
 
-            <div class="card">
-                <div class="container">
-                        <input class="mail-box" type="email" id="email" name="email" placeholder="Mail" required>
-                        <input class="password-box" type="password" id="password" name="password" placeholder="Mot de passe" required>
-                </div>
-                <div class="container">
-                    <button class="btn-cancel">Retour</button>
-                    <input class="btn-validate" type="submit" value="Connexion">
-                    <div class="norm-text">Pas de compte ?</div> <a href="">Inscrivez-vous !</a>
-                </div>
+        <div class="container p-4 float-left">
+          <input
+            class="mail-box p-2"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Mail"
+            required
+          /> <br>
+          <input
+            class="password-box p-2"
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Mot de passe"
+            required
+          />
+        </div>
 
-            </div>
+        <div class="container p-4 text-center">
 
-        </form>
-        
-    </div>
+          <button class="btn-cancel">Retour</button>
+          <input class="btn-validate" type="submit" value="Connexion" />
 
+          <div class="norm-text p-2">Pas de compte ? <a href="">Inscrivez-vous !</a></div>
+          
+
+        </div>
+      </div>
+    </form>
+  </div>
 </template>

@@ -22,3 +22,15 @@
 }
 /* DEMO PAGE */
 
+
+.btn-validate{
+    @apply p-2 rounded-2xl;
+    background-color: #709CA5;
+    color:white;
+    border: 1px solid #709CA5;
+}
+.btn-validate:hover{
+    background-color: white;
+    color: #709CA5;
+    border: 1px solid #709CA5; 
+}
