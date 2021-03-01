@@ -10,10 +10,18 @@
                 </div>
             </router-link>
 
+            <!--
+
+                Créer évènement : Formulaire ajout évènement + réservation salle
+
+                Nos spectacles : Liste des évènements avec bouton réservation billet
+
+            -->
+
             <div class="flex-grow flex-wrap flex text-center border-l-2 border-r-2 border-gray-800">
                 <button class="flex-1 px-2 text-center underline whitespace-nowrap">Réservation de la salle</button>
                 <button class="flex-1 px-2 text-center underline">Evènement</button>
-                <button class="flex-1 px-2 text-center underline whitespace-nowrap">Réservation d'un billet</button>
+                <router-link class="flex-1" to="/reservationBillet">Réservation d'un billet</router-link>
             </div>
 
 

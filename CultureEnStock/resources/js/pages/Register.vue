@@ -3,7 +3,7 @@
     <div class="container">
         <div class="big-title text-3xl text-center p-10">Inscription</div>
         <div class="card w-1/3 m-auto rounded-3xl">
-            <form id="register_form" @submit="checkRegisterForm" action="/" method="POST">
+            <form id="register-form" @submit="checkRegisterForm" action="/" method="POST">
                 <div class="container p-4 float-left w-max">
                     <input
                         class="username-box p-2 input-xl"

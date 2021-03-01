@@ -6,6 +6,8 @@ import Home from './pages/Home.vue'
 import Profile from './pages/Profile.vue'
 import Register from './pages/Register.vue'
 
+import ReservationBillet from './pages/events/ReservationBillet.vue'
+
 Vue.use(VueRouter);
 
 export default new VueRouter({
@@ -14,5 +16,7 @@ export default new VueRouter({
         { path: '/register', component: Register },
         { path: '/', component: Home},
         { path: '/profile', component: Profile},
+
+        { path: '/reservationBillet', component: ReservationBillet }
     ]
 });

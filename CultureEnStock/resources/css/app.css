@@ -36,6 +36,11 @@
    -------------- Text Input ----------------
 */
 
+.form-input {
+    margin-bottom: 10px;
+    display: block;
+}
+
 input {
     .input-sm {
         width: 200px;
@@ -47,11 +52,14 @@ input {
     }
 
     @apply m-1;
-    border: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
     border-radius: 10px;
-
-
 }
+
+label {
+    color: gray;
+}
+
 /*
    -------------- Text ----------------
 */
@@ -59,6 +67,10 @@ input {
 /*
    -------------- Navigation Bar ----------------
 */
+
+.content_header {
+    border-bottom: 8px solid rgb(120, 245, 200);
+}
 
 /*
    -------------- Image ----------------
