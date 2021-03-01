@@ -17,10 +17,5 @@
   </div>
 </template>
 
-<script>
-import VueResizable from "vue-resizable";
 
-export default {
-
-}
 </script>
