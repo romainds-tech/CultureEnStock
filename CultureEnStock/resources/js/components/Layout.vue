@@ -16,19 +16,19 @@
       >
         <router-link
           class="flex-1 px-2 text-center underline whitespace-nowrap"
-          to=""
+          to="/event/create"
         >
           Créer un évènement</router-link
         >
         <router-link
           class="flex-1 px-2 text-center underline whitespace-nowrap"
-          to=""
+          to="/event/list"
         >
           Nos spectacles</router-link
         >
         <router-link
           class="flex-1 px-2 text-center underline whitespace-nowrap"
-          to="/reservationBillet"
+          to="/event/deliver"
         >
           Délivrer un ticket</router-link
         >

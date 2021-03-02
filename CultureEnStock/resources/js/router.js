@@ -7,6 +7,8 @@ import Profile from './pages/Profile.vue'
 import Register from './pages/Register.vue'
 
 import CreationEvent from './pages/events/CreationEvent.vue'
+import ListEvent from './pages/events/ListEvent.vue'
+import DeliverTicket from './pages/events/DeliverTicket.vue'
 
 Vue.use(VueRouter);
 
@@ -17,6 +19,8 @@ export default new VueRouter({
         { path: '/', component: Home},
         { path: '/profile', component: Profile},
 
-        { path: '/event/create', component: CreationEvent }
+        { path: '/event/create', component: CreationEvent },
+        { path: '/event/list', component: ListEvent },
+        { path: '/event/deliver', component: DeliverTicket }
     ]
 });
