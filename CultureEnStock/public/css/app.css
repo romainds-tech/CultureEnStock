@@ -41182,6 +41182,85 @@ video {
           animation: bounce 1s infinite;
 }
 
+/*
+   -------------- Buttons ----------------
+*/
+
+.btn-cancel { /* Cocheto */
+  --tw-bg-opacity: 1;
+  background-color: rgba(248, 113, 113, var(--tw-bg-opacity));
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+  color: white;
+  border: 1px solid #a00;
+  transition: all 0.8s ease-in-out;
+}
+
+.btn-cancel:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(254, 226, 226, var(--tw-bg-opacity));
+  color: #800;
+}
+
+.btn-validate{ /* ? */
+  border-radius: 1rem;
+  padding: 0.5rem;
+  background-color: #709CA5;
+  color:white;
+  border: 1px solid #709CA5;
+  transition: all 0.8s ease-in-out;
+}
+
+.btn-validate:hover{
+  background-color: white;
+  color: #709CA5;
+  border: 1px solid #709CA5;
+}
+
+/*
+   -------------- Text Input ----------------
+*/
+
+.form-input {
+  margin-bottom: 10px;
+  display: block;
+}
+
+input .input-sm {
+    width: 200px;
+    overflow-x: hidden;
+  }
+
+input .input-xl {
+    width: 100%;
+  }
+
+input {
+  margin: 0.25rem;
+  border-bottom: 1px solid lightgray;
+  border-radius: 10px;
+}
+
+label {
+  color: gray;
+}
+
+/*
+   -------------- Text ----------------
+*/
+
+/*
+   -------------- Navigation Bar ----------------
+*/
+
+.content_header {
+  border-bottom: 8px solid rgb(120, 245, 200);
+}
+
+/*
+   -------------- Image ----------------
+*/
+
 /* DEMO PAGE */
 
 .pokemons{
@@ -41205,8 +41284,6 @@ video {
       text-align: center;
       width: 100%;
     }
-
-/* DEMO PAGE */
 
 @media (min-width: 640px) {
   .sm\:container {
@@ -193947,5 +194024,4 @@ video {
             animation: bounce 1s infinite;
   }
 }
-
 
