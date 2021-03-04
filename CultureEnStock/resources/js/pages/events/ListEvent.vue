@@ -1,15 +1,13 @@
 <template>
-    <div class="container">
-        <div class="w-1/2 m-auto border-2">
-            <event
-                v-for="(event, index) in events"
-                :key="index"
-                :id="event.idevenement"
-                :idtype="event.idtype"
-                :libelle="event.libelle"
-                :datedebut="event.date_debut"
-            ></event>
-        </div>
+    <div>
+        <event
+            v-for="(event, index) in events"
+            :key="index"
+            :id="event.idevenement"
+            :idtype="event.idtype"
+            :libelle="event.libelle"
+            :datedebut="event.date_debut"
+        ></event>
     </div>
 </template>
 
@@ -27,5 +25,11 @@ export default {
                 this.events = response.data.data;
             })
     },
+
+    data() {
+        return {
+            events: [],
+        }
+    }
 }
 </script>
