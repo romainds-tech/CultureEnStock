@@ -38440,9 +38440,42 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" })
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "w-1/2 m-auto border-2" }, [
+        _c("div", { staticClass: "eventtitle text-center p-2" }, [
+          _vm._v("\n            Evenement\n        ")
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "eventdesc p-2 text-justify" }, [
+          _vm._v(
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, labore voluptas repellat, quos animi inventore vitae consequuntur odit reprehenderit molestiae autem suscipit optio praesentium eos distinctio iste dignissimos corrupti dolore. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi accusantium laudantium unde officiis enim non. Similique dolorum eligendi id necessitatibus ad cumque recusandae aliquam obcaecati distinctio nostrum? Architecto, consectetur explicabo?"
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "eventdate p-2" }, [
+          _vm._v(" du 12 au 15 Septembre")
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "eventprice p-2 w-full text-right" }, [
+          _vm._v(" 50 €")
+        ]),
+        _vm._v(" "),
+        _c(
+          "button",
+          { staticClass: "btn-reserve block m-auto p-2 border-2 bg-gray-300" },
+          [_vm._v("Reserver")]
+        )
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
