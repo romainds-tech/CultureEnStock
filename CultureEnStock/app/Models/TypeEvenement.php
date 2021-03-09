@@ -13,9 +13,9 @@ class TypeEvenement extends Model
 
     public $timestamps = false;
 
-    protected $table = 'types';
+    protected $table = 'type_evenements';
 
     public function evenements() {
-        return $this->hasMany('App\Models\Evenement', 'idevenement');
+        return $this->hasMany('App\Models\Evenement', 'type_evenement_id');
     }
 }

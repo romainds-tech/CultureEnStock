@@ -17,10 +17,10 @@ class Billet extends Model
     public $timestamps = false;
 
     public function evenement() {
-        return $this->belongsTo('App\Models\Evenement', 'idevenement');
+        return $this->belongsTo('App\Models\Evenement', 'evenement_id');
     }
 
     public function place() {
-        return $this->belongsTo('App\Models\Place', 'idplace');
+        return $this->belongsTo('App\Models\Place', 'place_id');
     }
 }

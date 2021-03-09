@@ -16,6 +16,7 @@ class Evenement extends Model
     protected $table = "evenements";
 
     protected $fillable = [
+        'date_debut',
         "libelle",
         "tmp_instal",
         "tmp_desinstal",
@@ -23,10 +24,10 @@ class Evenement extends Model
     ];
 
     public function type() {
-        return $this->belongsTo('App\Models\TypeEvenement', 'idtype');
+        return $this->belongsTo('App\Models\TypeEvenement', 'type_evenement_id');
     }
 
     public function billets() {
-        return $this->hasMany('App\Models\Billet', 'idbillet');
+        return $this->hasMany('App\Models\Billet', 'billet_id');
     }
 }
