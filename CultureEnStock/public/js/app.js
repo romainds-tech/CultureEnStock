@@ -1964,8 +1964,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -38657,24 +38655,21 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
-    _c(
-      "div",
-      { staticClass: "w-1/2 m-auto border-2" },
-      _vm._l(_vm.events, function(event, index) {
-        return _c("event", {
-          key: index,
-          attrs: {
-            id: event.idevenement,
-            idtype: event.idtype,
-            libelle: event.libelle,
-            datedebut: event.date_debut
-          }
-        })
-      }),
-      1
-    )
-  ])
+  return _c(
+    "div",
+    _vm._l(_vm.events, function(event, index) {
+      return _c("event", {
+        key: index,
+        attrs: {
+          id: event.idevenement,
+          idtype: event.idtype,
+          libelle: event.libelle,
+          datedebut: event.date_debut
+        }
+      })
+    }),
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
