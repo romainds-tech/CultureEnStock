@@ -1931,6 +1931,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   mounted: function mounted() {
     console.log("Component mounted.");
@@ -2034,6 +2039,7 @@ try {
 
 
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+window.axios.defaults.baseURL = 'http://cultureenstock.test/CultureEnStock/public';
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
@@ -38107,16 +38113,25 @@ var render = function() {
         "div",
         {
           staticClass:
-            "content_header bg-green-200 flex py-4 align-middle mb-20"
+            "content_header bg-green-200 flex py-4 align-middle mb-20 items-center"
         },
         [
-          _c("router-link", { attrs: { to: "/" } }, [
-            _c("div", { staticClass: "flex-none w-80 text-center" }, [
-              _c("img", { staticClass: "log", attrs: { src: "" } }),
-              _vm._v(" "),
-              _c("p", [_vm._v("Logo")])
-            ])
-          ]),
+          _c(
+            "div",
+            { staticClass: "flex w-80 text-center" },
+            [
+              _c("router-link", { attrs: { to: "/" } }, [
+                _c("img", {
+                  staticClass: "flex-1 px-12",
+                  attrs: {
+                    src:
+                      "\\CultureEnStock\\CultureEnStock\\public\\img\\logo.png"
+                  }
+                })
+              ])
+            ],
+            1
+          ),
           _vm._v(" "),
           _c(
             "div",
@@ -38158,26 +38173,44 @@ var render = function() {
             1
           ),
           _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "flex w-80 text-center" },
-            [
-              _c(
-                "router-link",
-                { staticClass: "flex-1", attrs: { to: "/login" } },
-                [_vm._v("Se connecter")]
-              ),
-              _vm._v(" "),
-              _c(
-                "router-link",
-                { staticClass: "flex-1", attrs: { to: "/register" } },
-                [_vm._v("S'inscrire")]
+          _vm.connecte
+            ? _c(
+                "div",
+                { staticClass: "w-80 text-center" },
+                [
+                  _c("router-link", { attrs: { to: "/profile" } }, [
+                    _c("img", { attrs: { src: "" } }),
+                    _vm._v(" "),
+                    _c("p", [_vm._v("Pseudo")])
+                  ])
+                ],
+                1
               )
-            ],
-            1
-          )
-        ],
-        1
+            : _c(
+                "div",
+                { staticClass: "w-80 flex text-center flex-wrap" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "flex-1 px-2 whitespace-nowrap",
+                      attrs: { to: "/login" }
+                    },
+                    [_vm._v("Se connecter")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "flex-1 px-2 whitespace-nowrap",
+                      attrs: { to: "/register" }
+                    },
+                    [_vm._v("S'inscrire")]
+                  )
+                ],
+                1
+              )
+        ]
       ),
       _vm._v(" "),
       _c("router-view")
@@ -38328,30 +38361,72 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "flex justify-between space-x-4 mt-24" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "bg-pink-900 h-44 w-44 text-white text-center font-extrabold flex items-center justify-center rounded-full"
-          },
-          [_vm._v("\n      photo\n    ")]
-        ),
+      _c("div", { staticClass: "border-b-2 border-purple-800" }, [
+        _c("div", { staticClass: "flex justify-between space-x-4 mt-24" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "bg-pink-900 h-44 w-44 text-white text-center font-extrabold flex items-center justify-center rounded-full"
+            },
+            [_vm._v("\n        photo\n      ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "rounded-md bg-pink-900 text-white font-semibold flex items-center justify-center py-3 px-96"
+            },
+            [_vm._v("\n        PSEUDO\n      ")]
+          )
+        ]),
         _vm._v(" "),
         _c(
           "div",
           {
             staticClass:
-              "rounded-md bg-pink-900 text-white font-semibold flex items-center justify-center py-3 px-96"
+              "items-stretch flex text-center space-x-4 justify-end my-5"
           },
-          [_vm._v("\n      PSEUDO\n    ")]
+          [
+            _c("div", { staticClass: "rounded-full w-28 h-8 bg-yellow-500" }, [
+              _vm._v("S'abonner")
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "rounded-full w-28 h-8 bg-red-700" }, [
+              _vm._v("Modifier")
+            ])
+          ]
         )
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "items-stretch flex" }, [
-        _c("div", {}, [_vm._v("S'abonner")]),
+      _c("div", { staticClass: "mt-20 w-9/12 ml-20" }, [
+        _c("div", { staticClass: "border-b-2  border-purple-800" }, [
+          _c("div", [_vm._v("PSEUDO")])
+        ]),
         _vm._v(" "),
-        _c("div", [_vm._v("Modifier")])
+        _c("div", { staticClass: "items-stretch" }, [
+          _c("div", [_vm._v("NOM")]),
+          _vm._v(" "),
+          _c("div", [_vm._v("PRENOM")])
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "items-stretch flex text-center space-x-4 justify-end my-5"
+          },
+          [
+            _c("div", { staticClass: "rounded-full w-28 h-8 bg-yellow-500" }, [
+              _vm._v("S'abonner")
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "rounded-full w-28 h-8 bg-red-700" }, [
+              _vm._v("Modifier")
+            ])
+          ]
+        )
       ])
     ])
   }

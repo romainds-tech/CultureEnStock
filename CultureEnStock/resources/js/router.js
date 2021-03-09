@@ -13,6 +13,7 @@ import DeliverTicket from './pages/events/DeliverTicket.vue'
 Vue.use(VueRouter);
 
 export default new VueRouter({
+    mode: 'history',
     routes: [
         { path: '/login', component: Login },
         { path: '/register', component: Register },
