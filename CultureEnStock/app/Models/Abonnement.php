@@ -9,9 +9,7 @@ class Abonnement extends Model
 {
     use HasFactory;
 
-    protected $table = "abonnement";
-
-    protected $primaryKey = "idabonnement";
+    protected $table = "abonnements";
 
     /**
      * A relier dans la BDD avec users.

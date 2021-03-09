@@ -12,9 +12,7 @@ class Billet extends Model
 {
     use HasFactory;
 
-    protected $primaryKey = "idbillet";
-
-    protected $table = "billet";
+    protected $table = "billets";
 
     public $timestamps = false;
 

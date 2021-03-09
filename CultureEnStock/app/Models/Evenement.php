@@ -13,7 +13,7 @@ class Evenement extends Model
 
     public $timestamps = false;
 
-    protected $table = "evenement";
+    protected $table = "evenements";
 
     protected $fillable = [
         "libelle",
@@ -21,8 +21,6 @@ class Evenement extends Model
         "tmp_desinstal",
         "tmp_netoy",
     ];
-
-    protected $primaryKey = "idevenement";
 
     public function type() {
         return $this->belongsTo('App\Models\TypeEvenement', 'idtype');

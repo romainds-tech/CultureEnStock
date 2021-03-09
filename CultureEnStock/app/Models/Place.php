@@ -11,9 +11,7 @@ class Place extends Model
 {
     use HasFactory;
 
-    protected $table = 'place';
-
-    protected $primaryKey = 'idplace';
+    protected $table = 'places';
 
     public $timestamps = false;
 
