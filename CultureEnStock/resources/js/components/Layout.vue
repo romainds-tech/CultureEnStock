@@ -2,14 +2,18 @@
 
 <template>
   <div>
-    <!-- TON CODE A ADAPTER -->
-    <div class="content_header bg-green-200 flex py-4 align-middle mb-20">
-      <router-link to="/">
-        <div class="flex-none w-80 text-center">
-          <img src="" class="log" />
-          <p>Logo</p>
-        </div>
-      </router-link>
+    <div
+      class="content_header bg-green-200 flex py-4 align-middle mb-20 items-center"
+    >
+      <div class="flex w-80 text-center">
+        <router-link to="/">
+
+          <img
+            src="\CultureEnStock\CultureEnStock\public\img\logo.png"
+            class="flex-1 px-12"
+          />
+        </router-link>
+      </div>
 
       <div
         class="flex-grow flex-wrap flex text-center border-l-2 border-r-2 border-gray-800"
@@ -34,22 +38,23 @@
         >
       </div>
 
-      <div class="flex w-80 text-center">
-        <!-- Si pas connecté-->
-                <router-link to="/login" class="flex-1">Se connecter</router-link>
-                <router-link to="/register" class="flex-1">S'inscrire</router-link>
-        <!-- Si connecté
+
+      <div v-if="connecte" class="w-80 text-center">   <!-- Trouver la condition à mettre -->
         <router-link to="/profile">
           <img src="" class="" />
           <p>Pseudo</p>
-        </router-link>-->
+        </router-link>
+      </div>
+
+      <div v-else class="w-80 flex text-center flex-wrap">
+        <router-link to="/login" class="flex-1 px-2 whitespace-nowrap"
+          >Se connecter</router-link
+        >
+        <router-link to="/register" class="flex-1 px-2 whitespace-nowrap"
+          >S'inscrire</router-link
+        >
       </div>
     </div>
-    <!-- TON CODE A ADAPTER -->
-    <!--
-        <router-link to="/"> Home </router-link>
-        <router-link to="/login"> Login </router-link>
-        <router-link to="/profile"> Profil </router-link> -->
     <router-view></router-view>
   </div>
 </template>
