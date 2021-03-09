@@ -15,8 +15,8 @@ class EventSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('evenement')->insert([
-            'idtype' => 2,
+        DB::table('evenements')->insert([
+            'type_evenement_id' => 1,
             'libelle' => 'Frozen',
             'tmp_instal' => 20,
             'tmp_desinstal' => 30,
