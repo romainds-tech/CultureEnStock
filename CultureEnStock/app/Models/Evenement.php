@@ -13,6 +13,8 @@ class Evenement extends Model
 
     public $timestamps = false;
 
+    protected $table = "evenement";
+
     protected $fillable = [
         "libelle",
         "tmp_instal",
