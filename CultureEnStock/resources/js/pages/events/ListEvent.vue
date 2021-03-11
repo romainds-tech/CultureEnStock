@@ -7,6 +7,7 @@
             :idtype="event.idtype"
             :libelle="event.libelle"
             :datedebut="event.date_debut"
+            :prix="event.prix"
         ></event>
     </div>
 </template>

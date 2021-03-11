@@ -26,6 +26,19 @@
                 </div>
 
                 <div class="form-input text-center">
+                    <label for="name">Prix</label><br>
+                    <input
+                        class="price-box p-2 input-xl"
+                        type="number"
+                        id="price"
+                        name="price"
+                        min="0"
+                        placeholder="Prix de la représentation"
+                        required
+                    />
+                </div>
+
+                <div class="form-input text-center">
                     <label for="school">Sortie scolaire</label>
                     <input
                         type="checkbox"

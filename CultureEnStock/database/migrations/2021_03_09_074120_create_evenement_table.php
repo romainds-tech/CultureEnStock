@@ -19,6 +19,8 @@ class CreateEvenementTable extends Migration
             $table->foreignId('type_evenement_id')->constrained('type_evenements');
             $table->string('libelle', 100);
 
+            $table->unsignedDecimal('prix');
+
             $table->integer('tmp_instal');
             $table->integer('tmp_desinstal');
             $table->integer('tmp_netoy');

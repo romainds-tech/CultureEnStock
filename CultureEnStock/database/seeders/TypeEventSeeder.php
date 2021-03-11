@@ -21,6 +21,7 @@ class TypeEventSeeder extends Seeder
 
         $type->evenements()->create([
             'libelle' => 'Frozen',
+            'prix' => 10,
             'tmp_instal' => 20,
             'tmp_desinstal' => 30,
             'tmp_netoy' => 20,
