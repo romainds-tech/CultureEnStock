@@ -9,11 +9,11 @@ import Register from './pages/Register.vue'
 import CreationEvent from './pages/events/CreationEvent.vue'
 import ListEvent from './pages/events/ListEvent.vue'
 import DeliverTicket from './pages/events/DeliverTicket.vue'
+import BookEvent from './pages/events/BookEvent.vue'
 
 Vue.use(VueRouter);
 
 export default new VueRouter({
-    mode: 'history',
     routes: [
         { path: '/login', component: Login },
         { path: '/register', component: Register },
@@ -21,6 +21,7 @@ export default new VueRouter({
         { path: '/profile', component: Profile},
 
         { path: '/event/create', component: CreationEvent },
+        { path: '/event/book/:id', component: BookEvent, props: true },
         { path: '/event/list', component: ListEvent },
         { path: '/event/deliver', component: DeliverTicket }
     ]
