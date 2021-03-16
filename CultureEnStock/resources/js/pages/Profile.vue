@@ -23,14 +23,14 @@
     </div>
 
     <div class="mt-20 w-9/12 ml-20 m-10">
-      <div class="border-b-2  border-purple-800">
+      <div class="border-b-2  border-purple-800 mb-4">
         <div>PSEUDO</div>
       </div>
-      <div class="items-stretch flex justify-between">
+      <div class="items-stretch flex justify-between mb-4">
         <div class="w-1/4 border-b-2  border-pink-800">NOM</div>
         <div class="w-1/4 border-b-2  border-pink-800">PRENOM</div>
       </div>
-      <div class="border-b-2  border-purple-800">
+      <div class="border-b-2  border-purple-800 mb-4">
         <div>PSEUDO</div>
       </div>
 
