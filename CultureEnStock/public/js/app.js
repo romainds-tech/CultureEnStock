@@ -2099,16 +2099,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
       form: {
         pseudo: '',
         name: '',
-        last_name: last_name,
-        mail: '',
+        last_name: '',
+        email: '',
         password: '',
         password_confirmation: ''
       },
@@ -2119,8 +2117,8 @@ __webpack_require__.r(__webpack_exports__);
     saveForm: function saveForm() {
       var _this = this;
 
-      axios.post('/api/registeraccount', this.form).then(function () {
-        console.log('saved');
+      axios.post("/api/register", this.form).then(function () {
+        console.log("saved");
       })["catch"](function (error) {
         _this.errors = error.response.data.errors;
       });
@@ -2340,7 +2338,6 @@ __webpack_require__.r(__webpack_exports__);
 
 vue__WEBPACK_IMPORTED_MODULE_8__.default.use(vue_router__WEBPACK_IMPORTED_MODULE_9__.default);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (new vue_router__WEBPACK_IMPORTED_MODULE_9__.default({
-  mode: 'history',
   routes: [{
     path: '/login',
     component: _pages_Login_vue__WEBPACK_IMPORTED_MODULE_0__.default
@@ -38988,10 +38985,10 @@ var render = function() {
           ],
           staticClass: "mail-box p-2 input-xl",
           attrs: {
-            type: "mail",
-            id: "mail",
-            name: "mail",
-            placeholder: "Mail",
+            type: "email",
+            id: "email",
+            name: "email",
+            placeholder: "Email",
             required: ""
           },
           domProps: { value: _vm.form.mail },
@@ -39066,25 +39063,28 @@ var render = function() {
         })
       ]),
       _vm._v(" "),
-      _vm._m(0)
+      _c("div", { staticClass: "container p-4 text-center" }, [
+        _c("button", { staticClass: "btn-cancel" }, [_vm._v("Retour")]),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass: "btn-validate",
+            attrs: { type: "submit" },
+            on: {
+              click: function($event) {
+                $event.preventDefault()
+                return _vm.saveForm($event)
+              }
+            }
+          },
+          [_vm._v(" Connexion ")]
+        )
+      ])
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container p-4 text-center" }, [
-      _c("button", { staticClass: "btn-cancel" }, [_vm._v("Retour")]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "btn-validate",
-        attrs: { type: "submit", value: "Connexion" }
-      })
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
