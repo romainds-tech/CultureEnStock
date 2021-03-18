@@ -35,11 +35,11 @@
         <br />
         <input
           class="mail-box p-2 input-xl"
-          type="mail"
-          id="mail"
-          name="mail"
-          placeholder="Mail"
-          v-model="form.mail"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email"
+          v-model="form.email"
           required
         />
         <br />
@@ -66,7 +66,7 @@
 
       <div class="container p-4 text-center">
         <button class="btn-cancel">Retour</button>
-        <input class="btn-validate" type="submit" value="Connexion" />
+        <button @click.prevent="saveForm" type="submit" class="btn-validate"> Connexion </button>
       </div>
     </div>
   </div>
@@ -77,12 +77,12 @@ export default {
   data() {
     return {
       form: {
-        pseudo: "",
-        name: "",
-        last_name:"",
-        mail: "",
-        password: "",
-        password_confirmation: "",
+        pseudo: '',
+        name: '',
+        last_name: '',
+        email: '',
+        password: '',
+        password_confirmation: '',
       },
       errors: [],
     };
@@ -90,7 +90,7 @@ export default {
   methods: {
     saveForm() {
       axios
-        .post("/api/registeraccount", this.form)
+        .post("/api/register", this.form)
         .then(() => {
           console.log("saved");
         })
