@@ -49,7 +49,7 @@
             name="event"
             placeholder="Evenement *"
           >
-            <option placeholder="teste" v-bind:value="{ number: 123 }"></option>
+            <option placeholder="teste" v-bind:value="{ number: 123 }">Evenement</option>
           </select>
 
           <br />
@@ -60,7 +60,7 @@
             name="date"
             placeholder="Date *"
           >
-            <option placeholder="teste" v-bind:value="{ number: 123 }"></option>
+            <option v-bind:value="{ number: 123 }">Date</option>
           </select>
 
           <br />
@@ -70,7 +70,7 @@
             id="place"
             name="place"
             placeholder="Votre place *">
-            <option placeholder="teste" v-bind:value="{ number: 123 }"></option>
+            <option placeholder="teste" v-bind:value="{ number: 123 }">Place</option>
           </select>
 
           <div
