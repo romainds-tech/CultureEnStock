@@ -14,7 +14,6 @@ import BookEvent from './pages/events/BookEvent.vue'
 Vue.use(VueRouter);
 
 export default new VueRouter({
-    mode: 'history',
     routes: [
         { path: '/login', component: Login },
         { path: '/register', component: Register },
