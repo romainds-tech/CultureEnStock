@@ -3,8 +3,8 @@
         <event
             v-for="(event, index) in events"
             :key="index"
-            :id="event.idevenement"
-            :idtype="event.idtype"
+            :id="event.id"
+            :idtype="event.type_id"
             :libelle="event.libelle"
             :datedebut="event.date_debut"
             :prix="event.prix"
