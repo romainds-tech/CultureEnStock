@@ -43,6 +43,17 @@
 
           <br />
           <select
+            class="event-box p-2 input-xl w-full bg-indigo-600 mx-2 mb-8"
+            type="selected"
+            id="event"
+            name="event"
+            placeholder="Evenement *"
+          >
+            <option placeholder="teste" v-bind:value="{ number: 123 }"></option>
+          </select>
+
+          <br />
+          <select
             class="date-box p-2 input-xl w-full bg-yellow-600 mx-2 mb-8"
             type="selected"
             id="date"
