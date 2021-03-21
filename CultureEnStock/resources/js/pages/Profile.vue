@@ -13,13 +13,14 @@
         <div
           class="rounded-md bg-pink-900 text-white font-semibold flex items-center justify-center py-3 px-96"
         >
-          PSEUDO
+          {{ user.email }}
         </div>
       </div>
 
       <div class="items-stretch flex text-center space-x-4 justify-end my-5">
         <div class="rounded-full w-28 h-8 bg-yellow-500">S'abonner</div>
         <div class="rounded-full w-28 h-8 bg-red-700">Modifier</div>
+        <button @click.prevent="logout">Déconnexion</button>
       </div>
     </div>
 
@@ -84,5 +85,26 @@
   </div>
   <!-- </div> -->
 </template>
+<script>
+export default {
+    data(){
+      return{
+        user: null
+      }
+    },
+    methods:{
+      logout(){
+        axios.post('/api/logout').then(()=>{
+          this.$router.push({ name: "home"})
+        })
+      }
+    },
+    mounted(){
+      axios.get('/api/user').then((res)=>{
+        this.user = res.data
+      })
+    }
+}
+</script>
 
 

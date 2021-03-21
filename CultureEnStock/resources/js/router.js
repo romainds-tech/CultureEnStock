@@ -10,15 +10,26 @@ import CreationEvent from './pages/events/CreationEvent.vue'
 import ListEvent from './pages/events/ListEvent.vue'
 import DeliverTicket from './pages/events/DeliverTicket.vue'
 import BookEvent from './pages/events/BookEvent.vue'
+import axios from 'axios';
 
 Vue.use(VueRouter);
 
 export default new VueRouter({
     routes: [
-        { path: '/login', component: Login },
+        { path: '/login', name:'login', component: Login },
         { path: '/register', component: Register },
-        { path: '/', component: Home},
-        { path: '/profile', component: Profile},
+        { path: '/', name:'home', component: Home},
+        { path: '/profile', name:'profile', component: Profile,
+            beforeEnter: (to, form, next) =>{
+                axios.get('/api/authenticate').then(()=>{
+                    next()
+                }).catch(()=>{
+                    return next({
+                        name: 'login'
+                    })
+                })
+            }
+        },
 
         { path: '/event/create', component: CreationEvent },
         { path: '/event/book/:id', name: 'book', component: BookEvent },

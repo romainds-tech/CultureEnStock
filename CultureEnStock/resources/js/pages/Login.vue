@@ -16,6 +16,7 @@
             id="email"
             name="email"
             placeholder="Mail"
+            v-model="form.email"
             required
           />
           <br />
@@ -25,13 +26,15 @@
             id="password"
             name="password"
             placeholder="Mot de passe"
+            v-model="form.password"
             required
           />
         </div>
 
         <div class="container p-4 text-center">
           <button class="btn-cancel">Retour</button>
-          <input class="btn-validate" type="submit" value="Connexion" />
+
+          <button @click.prevent="loginUser" type="submit" class="btn-validate"> Connexion </button>
 
           <div class="norm-text p-2">
             Pas de compte ?
@@ -46,10 +49,23 @@
 
 <script>
 export default {
-  mounted() {
-    axios.get("/sanctum/csrf-cookie").then((response) => {
-    
-    });
+  data(){
+    return{
+      form:{
+        email: '',
+        password: ''
+      },
+      errors: []
+    }
   },
+  methods:{
+    loginUser(){
+      axios.post('api/login', this.form).then(() =>{
+        this.$router.push({ name: "profile" });
+      }).catch((error) =>{
+        this.errors = error.response.data.errors;
+      })
+    }
+  }
 };
 </script>
