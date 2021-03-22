@@ -1,3 +1,3 @@
 <template>
-    <h1>Accueil</h1>
+    <h1 class="text-center text-5xl">Bienvenue chez CultureEnStock !</h1>
 </template>
